@@ -1,4 +1,3 @@
-import Menu from "./Menu";
 import MyRoutes from "./MyRoutes";
 
 function Layout() {

@@ -1,3 +1,26 @@
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f7f7f7;
+  border-bottom: solid 1px #e3e3e3;
+  padding: 0px;
+  margin-top: 0px;
+}
+
+#header h1 {
+  margin: 0;
+}
+
+#header nav {
+  flex: 1;
+  overflow: auto;
+  justify-content: space-between;
+}
+
+
+
 /*
 The following came with create-react-app:
 

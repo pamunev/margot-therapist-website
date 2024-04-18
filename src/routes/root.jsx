@@ -7,6 +7,7 @@ function Root() {
                 <h1>Margot Goralczyk</h1> 
                 <nav>
                     <Link to="/">Home</Link>
+                    <Link to="/about-me">About me</Link>
                     <Link to="/contact">Contact</Link>
                 </nav>
             </div>

@@ -17,6 +17,7 @@
   flex: 1;
   overflow: auto;
   justify-content: space-between;
+  padding-right: 5px;
 }
 
 

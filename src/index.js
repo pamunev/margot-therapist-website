@@ -7,6 +7,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./routes/root";
 import ErrorPage from "./error-page";
 import Contact from "./routes/contact";
+import Home from "./routes/home";
+import AboutMe from "./routes/AboutMe";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +19,14 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/about-me",
+        element: <AboutMe />,
       },
     ],
   },

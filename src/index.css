@@ -1,5 +1,15 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
 .button {
   cursor: pointer;
+}
+
+#content {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #header {
@@ -13,20 +23,68 @@
   margin-top: 0px;
 }
 
+#header > * {
+  padding-top: 2rem;
+}
+
 #header h1 {
   margin: 0;
+  font-family: "Tangerine", cursive;
+}
+
+#header h1 a {
+  text-decoration: none;
+  color: black;
 }
 
 #header nav {
-  flex: 1;
+  display: flex;
   overflow: auto;
-  justify-content: space-between;
-  padding-right: 5px;
+  justify-content: center;
+  
 }
+
+#header nav a {
+  text-decoration: none;
+  color: black;
+  padding: 0 20px 0 0;
+  font-style: "Lato", sans-serif;
+}
+
+
 
 .link {
   cursor: pointer;
 }
+
+/*------Contact Form------*/
+
+form input {
+  width: 200px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+form textarea {
+  width: 50%;
+  height: 100px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+form button {
+  background-color: green;
+  color: white;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 0%;
+}
+
+/* Not sure why this didn't work:
+form label {
+  margin-bottom: 10px;
+}
+*/
 
 
 

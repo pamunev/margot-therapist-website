@@ -40,15 +40,33 @@ function Contact() {
                 You can also send me a message using this form:
             </p>
             <Form ref={form} onSubmit={sendEmail}>
-                <label>First name</label>
-                <input type="text" name="first_name" />
-                <label>Last name</label>
-                <input type="text" name="last_name" />
-                <label>Email</label>
-                <input type="email" name="user_email" />
-                <label>Message</label>
-                <textarea name="message" />
-                <input type="submit" value="Send" className="button" />
+                <div>
+                    <label>First name:</label>
+                </div>
+                <div>
+                    <input type="text" name="first_name" />
+                </div>
+                <div>
+                    <label>Last name:</label>
+                </div>
+                <div>
+                    <input type="text" name="last_name" />
+                </div>
+                <div>
+                    <label>Email:</label>
+                </div>
+                <div>
+                    <input type="email" name="user_email" />
+                </div>
+                <div>
+                    <label>Message:</label>
+                </div>
+                <div>
+                    <textarea name="message" />
+                </div>
+                <div>
+                    <button type="submit" value="Send" className="button">Send</button>
+                </div>
             </Form>
         </div>
                 

@@ -1,17 +1,19 @@
-import { Outlet, Link } from "react-router-dom"
+import { Outlet, NavLink } from "react-router-dom"
 
 function Root() {
     return (
         <div>
             <div id="header">
-                <h1>Margot Goralczyk</h1> 
+                <h1>
+                    <NavLink to="/">Margot Goralczyk</NavLink>
+                </h1> 
                 <nav>
-                    <Link to="/">Home</Link>
-                    <Link to="/about-me">About me</Link>
-                    <Link to="/contact">Contact</Link>
+                    <NavLink to="/">Home</NavLink>
+                    <NavLink to="/about-me">About me</NavLink>
+                    <NavLink to="/contact">Contact</NavLink>
                 </nav>
             </div>
-            <div><Outlet /></div>
+            <div id="content"><Outlet /></div>
         </div>
             )
 }

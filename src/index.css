@@ -12,24 +12,33 @@ body {
   padding-right: 10px;
 }
 
+.content-text {
+  padding-left: 1%;
+  font-size: 20px;
+}
+
 #header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   background-color: #f7f7f7;
   border-bottom: solid 1px #e3e3e3;
   padding: 0px;
   margin-top: 0px;
+  margin-bottom: 1%;
+  text-align: center;
 }
 
 #header > * {
-  padding-top: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 #header h1 {
   margin: 0;
   font-family: "Tangerine", cursive;
+  padding-left: 20px;
 }
 
 #header h1 a {
@@ -78,6 +87,17 @@ form button {
   font-size: 20px;
   font-family: 'Courier New', Courier, monospace;
   border-radius: 0%;
+}
+
+.section-home {
+  display: flex;
+  flex-direction: row;
+}
+
+/*------Media query for desktop------*/
+
+@media all and (mid-width: 480px) {
+  
 }
 
 /* Not sure why this didn't work:

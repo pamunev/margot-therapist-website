@@ -1,4 +1,5 @@
 import { Outlet, NavLink } from "react-router-dom"
+import Footer from "./footer"
 
 function Root() {
     return (
@@ -14,6 +15,7 @@ function Root() {
                 </nav>
             </div>
             <div id="content"><Outlet /></div>
+            <div><Footer /></div>
         </div>
             )
 }

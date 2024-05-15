@@ -39,35 +39,30 @@ function Contact() {
             <p>
                 You can also send me a message using this form:
             </p>
-            <Form ref={form} onSubmit={sendEmail}>
-                <div>
-                    <label>First name:</label>
-                </div>
-                <div>
-                    <input type="text" name="first_name" />
-                </div>
-                <div>
-                    <label>Last name:</label>
-                </div>
-                <div>
-                    <input type="text" name="last_name" />
-                </div>
-                <div>
-                    <label>Email:</label>
-                </div>
-                <div>
-                    <input type="email" name="user_email" />
-                </div>
-                <div>
-                    <label>Message:</label>
-                </div>
-                <div>
-                    <textarea name="message" />
-                </div>
-                <div>
-                    <button type="submit" value="Send" className="button">Send</button>
-                </div>
-            </Form>
+            <div className="container">
+                <Form ref={form} onSubmit={sendEmail} action="" className="form">
+                    <div className="form-group">
+                        <label for="first_name" className="form-label">First name:</label>
+                        <input type="text" class="form-control" id="first_name" name="first_name" placeholder="e.g. Margot" tabIndex="1" required />
+                    </div>
+                    <div className="form-group">
+                        <label for="last_name">Last name:</label>
+                        <input type="text" class="form-control" id="last_name" name="last_name" placeholder="e.g. Goralczyk" tabIndex="2" required />
+                    </div>
+                    <div className="form-group">
+                        <label for="user_email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="e.g. margot.goralczyk@gmail.com" tabIndex="3" required />
+                    </div>
+                    <div className="form-group">
+                        <label for="message">Message:</label>
+                        <textarea rows="5" cols="50" id="message" name="message" placeholder="Enter your message..." tabindex="4" />
+                    </div>
+                    <div>
+                        <button type="submit" value="Send" className="button">Send</button>
+                    </div>
+                    
+                </Form>
+            </div>
         </div>
                 
     )

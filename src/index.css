@@ -1,10 +1,37 @@
+:root {
+  --font-color: #555;
+  --font-hover-color: green;
+}
+
 body {
   padding: 0;
   margin: 0;
 }
 
 .button {
+  background: 0 0 #fff;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  color: var(--font-color);
+  font-size: 1em;
+  padding: 10px 50px;
+  text-transform: uppercase;
   cursor: pointer;
+}
+
+.button:hover {
+  border-color:var(--font-hover-color);
+  color: var(--font-hover-color);
+}
+
+.cont-container-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-form {
+  width: 600px;
 }
 
 #content {
@@ -15,6 +42,35 @@ body {
 .content-text {
   padding-left: 1%;
   font-size: 20px;
+}
+.form-control {
+  box-shadow: none;
+  border-radius: 0;
+  border-color: #ccc;
+  border-style: none none solid none;
+  width: 100%;
+  font-size: 1.25em;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: var(--font-hover-color);
+  outline: none;
+}
+
+.form-control::placeholder {
+  color: #aaa;
+}
+
+.form-group {
+  margin-bottom: 1.5em;
+}
+
+.form-label {
+  font-size: .75em;
+  color:var(--font-color);
+  display: block; 
+  opacity: 1;
 }
 
 #header {
@@ -92,6 +148,10 @@ form button {
 .section-home {
   display: flex;
   flex-direction: row;
+}
+
+textarea {
+  resize: none;
 }
 
 /*------Media query for desktop------*/

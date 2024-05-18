@@ -5,6 +5,7 @@ import { Form } from "react-router-dom"
 function Contact() {
     const form = useRef()
     const [isSubmitted, setIsSubmitted] = useState(false)
+    const [focused, setFocused] = useState(false)
 
     const sendEmail = (e) => {
         e.preventDefault()
@@ -28,6 +29,16 @@ function Contact() {
             )
     }
 
+    const handleFocus = () => {
+        setFocused(true)
+        console.log("focused")
+    }
+
+    const handleBlur = () => {
+        setFocused(false)
+        console.log("not focused, man")
+    }
+
     return (
         <div>
             <p>
@@ -42,21 +53,21 @@ function Contact() {
             <div className="cont-container-form">
                 <div className="container-form">
                     <Form ref={form} onSubmit={sendEmail} action="" className="form">
-                        <div className="form-group">
-                            <label for="first_name" className="form-label">First name:</label>
-                            <input type="text" className="form-control" id="first_name" name="first_name" placeholder="e.g. Margot" tabIndex="1" required />
+                        <div className={`form-group ${focused ? "focused" : ""}`} >
+                            <label htmlFor="first_name" className="form-label">First name:</label>
+                            <input type="text" className="form-control" id="first_name" name="first_name" placeholder="First name" tabIndex="1" required onFocus={handleFocus} onBlur={handleBlur} />
                         </div>
                         <div className="form-group">
-                            <label for="last_name" className="form-label">Last name:</label>
-                            <input type="text" className="form-control" id="last_name" name="last_name" placeholder="e.g. Goralczyk" tabIndex="2" required />
+                            <label htmlFor="last_name" className="form-label">Last name:</label>
+                            <input type="text" className="form-control" id="last_name" name="last_name" placeholder="Last name" tabIndex="2" required onFocus={handleFocus} onBlur={handleBlur}/>
                         </div>
                         <div className="form-group">
-                            <label for="user_email" className="form-label">Email:</label>
-                            <input type="email" className="form-control" id="email" name="email" placeholder="e.g. margot.goralczyk@gmail.com" tabIndex="3" required />
+                            <label htmlFor="user_email" className="form-label">Email:</label>
+                            <input type="email" className="form-control" id="email" name="email" placeholder="Email" tabIndex="3" required onFocus={handleFocus} onBlur={handleBlur}/>
                         </div>
                         <div className="form-group">
-                            <label for="message" className="form-label">Message:</label>
-                            <textarea className="form-control" rows="5" cols="50" id="message" name="message" placeholder="Enter your message..." tabindex="4" />
+                            <label htmlFor="message" className="form-label">Message:</label>
+                            <textarea className="form-control" rows="5" cols="50" id="message" name="message" placeholder="Enter your message..." tabindex="4" onFocus={handleFocus} onBlur={handleBlur}/>
                         </div>
                         <div>
                             <button type="submit" value="Send" className="button">Send Message</button>

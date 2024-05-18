@@ -3,7 +3,7 @@ import Footer from "./footer"
 
 function Root() {
     return (
-        <div>
+        <div id="root-component">
             <div id="header">
                 <h1>
                     <NavLink to="/">Margot Goralczyk</NavLink>

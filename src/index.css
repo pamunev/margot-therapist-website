@@ -1,6 +1,14 @@
+/*-----Variables-----*/
 :root {
   --font-color: #555;
   --font-hover-color: green;
+}
+
+/*-----Styles-----*/
+
+/* This one doesn't quite work */
+#root-component:focus {
+  border: orange;
 }
 
 body {
@@ -28,10 +36,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #f5f5f5;
 }
 
 .container-form {
   width: 600px;
+  box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, 0.07);
+  padding: 2.5em;
+  background-color: white;
 }
 
 #content {
@@ -43,6 +55,14 @@ body {
   padding-left: 1%;
   font-size: 20px;
 }
+
+/* if I decide to go with the focused conditional selector
+.focused > .form-label {
+  opacity: 1;
+
+}
+*/
+
 .form-control {
   box-shadow: none;
   border-radius: 0;
@@ -50,6 +70,7 @@ body {
   border-style: none none solid none;
   width: 100%;
   font-size: 1.25em;
+  transition: all .6s;
 }
 
 .form-control:focus {
@@ -62,15 +83,41 @@ body {
   color: #aaa;
 }
 
+.form-control:focus::placeholder {
+  opacity: 0;
+  transition: all .3s;
+}
+
+.form-control:invalid:focus {
+  border-color: red;
+}
+
+.form-control:valid:focus {
+  border-color: green;
+}
+
 .form-group {
   margin-bottom: 1.5em;
+  transition: all .3s
 }
+
+.form-group:focus-within {
+  transform: scale(1.1,1.1);
+}
+
+.form-group:focus-within .form-label {
+  opacity: 1;
+  transform: translateX(0px)
+}
+
 
 .form-label {
   font-size: .75em;
   color:var(--font-color);
   display: block; 
-  opacity: 1;
+  opacity: 0;
+  transition: all .3s;
+  transform: translateX(-50px)
 }
 
 #header {

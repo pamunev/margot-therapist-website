@@ -4,7 +4,7 @@
   --font-hover-color: green;
 }
 
-/*-----Styles-----*/
+/*-----Global Styles-----*/
 
 /* This one doesn't quite work */
 #root-component:focus {
@@ -15,6 +15,26 @@ body {
   padding: 0;
   margin: 0;
 }
+
+#content {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.content-text {
+  padding-left: 1%;
+  font-size: 20px;
+}
+
+/*-----CONTACT PAGE-----*/
+
+.contact-page a {
+  text-decoration: none;
+  color: green;
+  font-weight: bold;
+}
+
+/*-----Contact Form-----*/
 
 .button {
   background: 0 0 #fff;
@@ -28,32 +48,24 @@ body {
 }
 
 .button:hover {
-  border-color:var(--font-hover-color);
+  border-color: var(--font-hover-color);
   color: var(--font-hover-color);
 }
 
 .cont-container-form {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f5f5f5;
+
+  background-color: white;
 }
 
 .container-form {
   width: 600px;
-  box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
   padding: 2.5em;
   background-color: white;
-}
-
-#content {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.content-text {
-  padding-left: 1%;
-  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
 }
 
 /* if I decide to go with the focused conditional selector
@@ -70,7 +82,7 @@ body {
   border-style: none none solid none;
   width: 100%;
   font-size: 1.25em;
-  transition: all .6s;
+  transition: all 0.6s;
 }
 
 .form-control:focus {
@@ -85,7 +97,7 @@ body {
 
 .form-control:focus::placeholder {
   opacity: 0;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .form-control:invalid:focus {
@@ -98,27 +110,61 @@ body {
 
 .form-group {
   margin-bottom: 1.5em;
-  transition: all .3s
+  transition: all 0.3s;
 }
 
 .form-group:focus-within {
-  transform: scale(1.1,1.1);
+  transform: scale(1.1, 1.1);
 }
 
 .form-group:focus-within .form-label {
   opacity: 1;
-  transform: translateX(0px)
+  transform: translateX(0px);
 }
-
 
 .form-label {
-  font-size: .75em;
-  color:var(--font-color);
-  display: block; 
+  font-size: 0.75em;
+  color: var(--font-color);
+  display: block;
   opacity: 0;
-  transition: all .3s;
-  transform: translateX(-50px)
+  transition: all 0.3s;
+  transform: translateX(-50px);
 }
+
+form input {
+  width: 200px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+form textarea {
+  width: 50%;
+  height: 100px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+form button {
+  background-color: green;
+  color: white;
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+  border-radius: 0%;
+}
+
+.contact-text {
+  width: 22.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: top;
+  justify-content: left;
+}
+
+textarea {
+  resize: none;
+}
+
+/*-----Header-----*/
 
 #header {
   display: flex;
@@ -153,7 +199,6 @@ body {
   display: flex;
   overflow: auto;
   justify-content: center;
-  
 }
 
 #header nav a {
@@ -163,48 +208,20 @@ body {
   font-style: "Lato", sans-serif;
 }
 
-
-
 .link {
   cursor: pointer;
 }
 
-/*------Contact Form------*/
-
-form input {
-  width: 200px;
-  margin-bottom: 20px;
-  margin-top: 5px;
-}
-
-form textarea {
-  width: 50%;
-  height: 100px;
-  margin-bottom: 20px;
-  margin-top: 5px;
-}
-
-form button {
-  background-color: green;
-  color: white;
-  font-size: 20px;
-  font-family: 'Courier New', Courier, monospace;
-  border-radius: 0%;
-}
+/*-----HOME PAGE-----*/
 
 .section-home {
   display: flex;
   flex-direction: row;
 }
 
-textarea {
-  resize: none;
-}
-
 /*------Media query for desktop------*/
 
 @media all and (mid-width: 480px) {
-  
 }
 
 /* Not sure why this didn't work:
@@ -212,8 +229,6 @@ form label {
   margin-bottom: 10px;
 }
 */
-
-
 
 /*
 The following came with create-react-app:

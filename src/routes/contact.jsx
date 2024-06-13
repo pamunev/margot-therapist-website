@@ -37,19 +37,23 @@ function Contact() {
 
   return (
     <div className="contact-page">
-      <div>
-        To reach me, you can email me at{" "}
-        <a href="mailto:margot.goralczyk@gmail.com">
-          margot.goralczyk@gmail.com
-        </a>{" "}
-        or call me at 412-398-4241.
-      </div>
+      <div className="contact-title">Contact</div>
       <div className="cont-container-form">
         <div className="contact-text">
-          <p>You can also send me a message using this form:</p>
+          <div className="contact-category">Email:</div>
+          <div className="contact-info">
+            <a href="mailto:margot.goralczyk@gmail.com">
+              margot.goralczyk@gmail.com
+            </a>
+          </div>
+          <div className="contact-category">Phone:</div>
+          <div className="contact-info">412-398-4241</div>
         </div>
         <div className="container-form">
           <Form ref={form} onSubmit={sendEmail} action="" className="form">
+            <p className="form-header">
+              You can also send me a message using this form:
+            </p>
             <div className={`form-group ${focused ? "focused" : ""}`}>
               <label htmlFor="first_name" className="form-label">
                 First name:

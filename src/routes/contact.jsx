@@ -53,7 +53,8 @@ function Contact() {
         <div className="container-form">
           <Form ref={form} onSubmit={sendEmail} action="" className="form">
             <p className="form-header">
-              You can also send me a message using this form:
+              You can also <strong>request a consultation</strong> or send me a
+              message using this form:
             </p>
             <div className={`form-group ${focused ? "focused" : ""}`}>
               <label htmlFor="first_name" className="form-label">

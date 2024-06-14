@@ -24,6 +24,7 @@ body {
 .content-text {
   padding-left: 1%;
   font-size: 20px;
+  /*width: 100%;*/
 }
 
 .hr-title {
@@ -83,7 +84,12 @@ body {
 .section-home {
   display: flex;
   flex-direction: row;
+  /*flex-wrap: wrap;*/
 }
+
+/*#margot-pic {
+  width: 100%;
+}*/
 
 /*-----ABOUT ME PAGE-----*/
 
@@ -205,6 +211,7 @@ body {
   transition: all 0.3s;
 }
 
+/* v This is the one I delete if I want to stop it from growing v*/
 .form-group:focus-within {
   transform: scale(1.1, 1.1);
 }

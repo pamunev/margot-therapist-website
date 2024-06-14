@@ -38,6 +38,7 @@ function Contact() {
   return (
     <div className="contact-page">
       <div className="contact-title">Contact</div>
+      <hr className="hr-title" />
       <div className="cont-container-form">
         <div className="contact-text">
           <div className="contact-category">Email:</div>

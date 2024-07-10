@@ -16,11 +16,6 @@ body {
   margin: 0;
 }
 
-#content {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
 .content-text {
   padding-left: 1%;
   font-size: 20px;
@@ -29,6 +24,27 @@ body {
 
 .hr-title {
   width: 20%;
+}
+
+/*-----Root-----*/
+
+#root-component {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#content {
+  padding-left: 10px;
+  padding-right: 10px;
+  flex: 1;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f7f7f7;
+  border-top: solid 1px #e3e3e3;
 }
 
 /*-----Header-----*/
@@ -212,9 +228,9 @@ body {
 }
 
 /* v This is the one I delete if I want to stop it from growing v*/
-.form-group:focus-within {
+/*.form-group:focus-within {
   transform: scale(1.1, 1.1);
-}
+}*/
 
 .form-group:focus-within .form-label {
   opacity: 1;

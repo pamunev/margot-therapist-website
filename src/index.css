@@ -1,7 +1,7 @@
 /*-----Variables-----*/
 :root {
-  --font-color: #555;
-  --font-hover-color: green;
+  --form-font-color: #555;
+  --form-font-hover-color: green;
 }
 
 /*-----Global Styles-----*/
@@ -45,6 +45,24 @@ body {
   padding: 1rem;
   background-color: #f7f7f7;
   border-top: solid 1px #e3e3e3;
+  margin-top: 1rem;
+}
+
+.copyright {
+  display: inline-flex;
+  align-items: center;
+}
+
+.pig-image img {
+  width: 2rem;
+  height: auto;
+  margin-left: 2em;
+}
+
+.reverse-pig-image img {
+  width: 2rem;
+  height: auto;
+  margin-right: 2em;
 }
 
 /*-----Header-----*/
@@ -60,6 +78,7 @@ body {
   margin-top: 0px;
   margin-bottom: 1%;
   text-align: center;
+  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
 }
 
 #header > * {
@@ -76,12 +95,27 @@ body {
 #header h1 a {
   text-decoration: none;
   color: black;
+  margin-left: 2rem;
+  font-size: 2.5rem;
 }
 
 #header nav {
   display: flex;
   overflow: auto;
+}
+
+#header nav ul {
+  display: flex;
   justify-content: center;
+  list-style-type: none;
+  overflow: auto;
+}
+
+/*I added this so that the underline on the active links wouldn't disappear when it was offset by more than .2rem.*/
+#header nav ul li {
+  line-height: 2;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-right: 2rem;
 }
 
 #header nav a {
@@ -95,6 +129,11 @@ body {
   cursor: pointer;
 }
 
+.nav-link.active {
+  text-decoration: underline !important;
+  text-underline-offset: 0.3rem;
+}
+
 /*-----HOME PAGE-----*/
 
 .section-home {
@@ -103,9 +142,14 @@ body {
   /*flex-wrap: wrap;*/
 }
 
-/*#margot-pic {
-  width: 100%;
-}*/
+.margot-pic {
+  width: 25rem;
+  height: auto;
+}
+
+.home-content-text {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 /*-----ABOUT ME PAGE-----*/
 
@@ -114,6 +158,11 @@ body {
   justify-content: center;
   font-size: 40px;
   text-transform: uppercase;
+}
+
+.about-content-text {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 4.5rem 0 4.5rem;
 }
 
 /*-----CONTACT PAGE-----*/
@@ -154,7 +203,7 @@ body {
   background: 0 0 #fff;
   border: 1px solid #aaa;
   border-radius: 3px;
-  color: var(--font-color);
+  color: var(--form-font-color);
   font-size: 1em;
   padding: 10px 50px;
   text-transform: uppercase;
@@ -162,8 +211,8 @@ body {
 }
 
 .button:hover {
-  border-color: var(--font-hover-color);
-  color: var(--font-hover-color);
+  border-color: var(--form-font-hover-color);
+  color: var(--form-font-hover-color);
 }
 
 .cont-container-form {
@@ -201,7 +250,7 @@ body {
 
 .form-control:focus {
   box-shadow: none;
-  border-color: var(--font-hover-color);
+  border-color: var(--form-font-hover-color);
   outline: none;
 }
 
@@ -239,7 +288,7 @@ body {
 
 .form-label {
   font-size: 0.75em;
-  color: var(--font-color);
+  color: var(--form-font-color);
   display: block;
   opacity: 0;
   transition: all 0.3s;
@@ -276,9 +325,15 @@ textarea {
   margin-top: 0px;
 }
 
-/*------Media query for desktop------*/
+/*------Media query for mobile------*/
 
-@media all and (mid-width: 480px) {
+@media all and (max-width: 680px) {
+  /*-----Contact form-----*/
+
+  .cont-container-form {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /* Not sure why this didn't work:

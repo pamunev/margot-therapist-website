@@ -7,7 +7,7 @@ function AboutMe() {
         Margot Goralczyk, LCSW or whatever the letters are
       </div>
       <hr className="hr-title" />
-      <div className="about-body">
+      <div className="about-content-text">
         <p>
           Here will go Margot's education and work experience. Maybe something
           like:

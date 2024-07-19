@@ -1,12 +1,18 @@
-import margot from "../Assets/images/margot-therapist-pic-1.png";
+import margot from "../Assets/images/margot-therapist-car.png";
 
 export default function Home() {
   return (
     <div className="section-home">
-      <div id="margot-pic">
-        <img src={margot} alt="Margot the Therapist" />
+      <div id="margot-pic-area">
+        <img src={margot} alt="Margot the Therapist" className="margot-pic" />
       </div>
-      <div className="content-text">
+      <div className="home-content-text">
+        <p>
+          <strong>I think this section should be shorter.</strong> Just a
+          snippet, maybe a headline that summarizes her services. Before the
+          more in-depth stuff. With maybe a link to the about me section. But
+          here's the original text from Margot's other pages:
+        </p>
         <p>
           Do you feel alone, confused, or like no one understands you? Do you
           feel like your life is out of balance? Perhaps you are experiencing
@@ -34,6 +40,11 @@ export default function Home() {
           share one’s feelings.I will hold a comforting space for you with
           sensitivity, dignity & respect. Your feelings and experiences are
           valid. It's okay to not be okay.
+        </p>
+        <p>
+          <strong>
+            Maybe add About me and Make an appointment buttons here.
+          </strong>
         </p>
       </div>
     </div>

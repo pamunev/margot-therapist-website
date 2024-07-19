@@ -115,7 +115,7 @@ function Contact() {
                 id="message"
                 name="message"
                 placeholder="Enter your message..."
-                tabindex="4"
+                tabIndex="4"
                 onFocus={handleFocus}
                 onBlur={handleBlur}
               />

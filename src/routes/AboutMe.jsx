@@ -7,8 +7,11 @@ function AboutMe() {
       <hr className="hr-title" />
       <div className="about-content-text">
         <p>
-          Here will go Margot's education and work experience. Maybe something
-          like:
+          Here will go Margot's education and work experience.{" "}
+          <strong>
+            CLIENT WILL SEND ME THE CONTENT THEY WANT FOR THIS SECTION.
+          </strong>{" "}
+          Maybe something like:
         </p>
         <p>
           Margot is a Licensed Master of Science of Social Work from the

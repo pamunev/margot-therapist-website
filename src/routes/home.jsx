@@ -1,5 +1,7 @@
 import margot from "../Assets/images/margot-dog.png";
 
+import { NavLink } from "react-router-dom";
+
 export default function Home() {
   return (
     <div className="section-home">
@@ -11,11 +13,13 @@ export default function Home() {
           <strong>I think this section should be shorter.</strong> Just a
           snippet, maybe a headline that summarizes her services. Before the
           more in-depth stuff. With maybe a link to the about me section.{" "}
+        </p>
+        <p>
           <strong>
             CLIENT WILL SEND ME THE CONTENT THEY WANT FOR THIS SECTION.
           </strong>
-          But here's the original text from Margot's other pages:
         </p>
+        <p>But here's the original text from Margot's other pages:</p>
         <p>
           Do you feel alone, confused, or like no one understands you? Do you
           feel like your life is out of balance? Perhaps you are experiencing
@@ -49,6 +53,11 @@ export default function Home() {
             Maybe add About me and Make an appointment buttons here.
           </strong>
         </p>
+        <NavLink to="/contact">
+          <button type="submit" className="button">
+            Schedule an appointment
+          </button>
+        </NavLink>
       </div>
     </div>
   );

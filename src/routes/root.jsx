@@ -13,23 +13,24 @@ function Root() {
     document.querySelectorAll(".nav-link").forEach((link) => {
       console.log(link.href);
     });
+
+    const navBtn = document.querySelector("#menu-btn");
+
+    navBtn.addEventListener("click", () => {
+      const isExpanded = JSON.parse(navBtn.getAttribute("aria-expanded"));
+      navBtn.setAttribute("aria-expanded", !isExpanded);
+    });
   }, []);
 
-  const navBtn = document.querySelector("#menu-btn");
   const nav = document.querySelector("nav");
   const navLinks = document.querySelector(".nav-links");
-
-  navBtn.addEventListener("click", () => {
-    const isExpanded = JSON.parse(navBtn.getAttribute("aria-expanded"));
-    navBtn.setAttribute("aria-expanded", !isExpanded);
-  });
 
   return (
     <div id="root-component">
       <div id="header">
         <h1>
           <NavLink to="/" className="logo">
-            Margot Goralczyk
+            Margot Goralczyk, LCSW
           </NavLink>
         </h1>
         <nav>

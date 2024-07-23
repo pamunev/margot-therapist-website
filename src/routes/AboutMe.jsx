@@ -3,9 +3,7 @@ import Footer from "./footer";
 function AboutMe() {
   return (
     <div>
-      <div className="about-title">
-        Margot Goralczyk, LCSW or whatever the letters are
-      </div>
+      <div className="about-title">Margot Goralczyk, LCSW</div>
       <hr className="hr-title" />
       <div className="about-content-text">
         <p>

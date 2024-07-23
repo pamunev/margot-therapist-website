@@ -1,4 +1,4 @@
-import margot from "../Assets/images/margot-therapist-car.png";
+import margot from "../Assets/images/margot-dog.png";
 
 export default function Home() {
   return (
@@ -10,8 +10,11 @@ export default function Home() {
         <p>
           <strong>I think this section should be shorter.</strong> Just a
           snippet, maybe a headline that summarizes her services. Before the
-          more in-depth stuff. With maybe a link to the about me section. But
-          here's the original text from Margot's other pages:
+          more in-depth stuff. With maybe a link to the about me section.{" "}
+          <strong>
+            CLIENT WILL SEND ME THE CONTENT THEY WANT FOR THIS SECTION.
+          </strong>
+          But here's the original text from Margot's other pages:
         </p>
         <p>
           Do you feel alone, confused, or like no one understands you? Do you

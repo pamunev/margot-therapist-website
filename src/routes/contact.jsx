@@ -114,7 +114,7 @@ function Contact() {
                 cols="50"
                 id="message"
                 name="message"
-                placeholder="Enter your message..."
+                placeholder="Enter your message/why you’re seeking services..."
                 tabIndex="4"
                 onFocus={handleFocus}
                 onBlur={handleBlur}

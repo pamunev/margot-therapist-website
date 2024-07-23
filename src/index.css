@@ -4,6 +4,9 @@
   --form-font-hover-color: green;
   --accent: purple;
   --dark: #050264;
+  --body-background: #c2efeb;
+  --header-background: #b4d6ae;
+  --border: #81bb77;
 }
 
 /*-----Global Styles-----*/
@@ -16,6 +19,7 @@
 body {
   padding: 0;
   margin: 0;
+  background-color: var(--body-background);
 }
 
 .content-text {
@@ -45,8 +49,10 @@ body {
 .footer {
   text-align: center;
   padding: 1rem;
-  background-color: #f7f7f7;
-  border-top: solid 1px #e3e3e3;
+  /*background-color: #f7f7f7;
+  border-top: solid 1px #e3e3e3;*/
+  background-color: var(--header-background);
+  border-top: solid 1px var(--border);
   margin-top: 1rem;
 }
 
@@ -74,8 +80,8 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  background-color: #f7f7f7;
-  border-bottom: solid 1px #e3e3e3;
+  background-color: var(--header-background);
+  border-bottom: solid 1px var(--border);
   padding: 0px;
   margin-top: 0px;
   margin-bottom: 1%;
@@ -155,13 +161,18 @@ body {
   /*flex-wrap: wrap;*/
 }
 
+#margot-pic-area {
+  max-width: 30%;
+}
+
 .margot-pic {
-  width: 25rem;
+  width: 100%;
   height: auto;
 }
 
 .home-content-text {
   font-family: Arial, Helvetica, sans-serif;
+  margin: 2rem;
 }
 
 /*-----ABOUT ME PAGE-----*/
@@ -182,7 +193,7 @@ body {
 
 .contact-page a {
   text-decoration: none;
-  color: green;
+  color: #c892a4;
   font-weight: bold;
 }
 
@@ -213,10 +224,10 @@ body {
 /*-----Contact Form-----*/
 
 .button {
-  background: 0 0 #fff;
-  border: 1px solid #aaa;
+  background: 0 0 var(--body-background);
+  border: 1px solid #c892a4;
   border-radius: 3px;
-  color: var(--form-font-color);
+  color: #c892a4;
   font-size: 1em;
   padding: 10px 50px;
   text-transform: uppercase;
@@ -230,14 +241,15 @@ body {
 
 .cont-container-form {
   display: flex;
-  background-color: white;
+  background-color: var(--body-background);
 }
 
 .container-form {
   width: 600px;
   box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
   padding: 2.5em;
-  background-color: white;
+  padding-bottom: 1.5em;
+  background-color: var(--body-background);
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 20px;
@@ -254,10 +266,11 @@ body {
 .form-control {
   box-shadow: none;
   border-radius: 0;
-  border-color: #ccc;
+  background-color: var(--body-background);
+  border-color: #c892a4;
   border-style: none none solid none;
   width: 100%;
-  font-size: 1.25em;
+  font-size: 1em;
   transition: all 0.6s;
 }
 
@@ -268,7 +281,7 @@ body {
 }
 
 .form-control::placeholder {
-  color: #aaa;
+  color: #c892a4;
 }
 
 .form-control:focus::placeholder {
@@ -310,15 +323,15 @@ body {
 
 form input {
   width: 200px;
-  margin-bottom: 20px;
-  margin-top: 5px;
+  margin-bottom: 7px;
+  margin-top: 1px;
 }
 
 form textarea {
   width: 50%;
-  height: 100px;
-  margin-bottom: 20px;
-  margin-top: 5px;
+  height: 80px;
+  margin-bottom: 7px;
+  margin-top: 1px;
 }
 
 form button {
@@ -400,11 +413,45 @@ textarea {
     transform: translate3d(0, 0, 0);
   }
 
+  /*-----HOME PAGE-----*/
+
+  .section-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*flex-wrap: wrap;*/
+  }
+
+  #margot-pic-area {
+    max-width: 50%;
+  }
+
+  .margot-pic {
+    width: 100%;
+    height: auto;
+  }
+
+  /*-----ABOUT ME PAGE-----*/
+
+  .about-title {
+    font-size: 30px;
+  }
+
+  /*-----CONTACT PAGE-----*/
+
+  .contact-text {
+    width: 100%;
+  }
+
   /*-----Contact form-----*/
 
   .cont-container-form {
     display: flex;
     flex-direction: column;
+  }
+
+  .container-form {
+    width: 75%;
   }
 }
 

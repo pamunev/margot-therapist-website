@@ -423,7 +423,7 @@ textarea {
   }
 
   .btn--menu {
-    color: var(--accent-2);
+    color: #89c3d3;
     background-color: transparent;
     border: none;
     display: grid;

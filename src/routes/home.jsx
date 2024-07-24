@@ -55,7 +55,7 @@ export default function Home() {
         </p>
         <NavLink to="/contact">
           <button type="submit" className="button">
-            Schedule an appointment
+            Request an appointment
           </button>
         </NavLink>
       </div>

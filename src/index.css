@@ -131,6 +131,7 @@ body {
   color: black;
   padding: 0 20px 0 0;
   font-style: "Lato", sans-serif;
+  transition: 0.6s;
 }
 
 .link {
@@ -147,6 +148,10 @@ body {
   outline: 4px solid var(--accent);
   outline-offset: 0.2em;
   border-radius: 0.5rem;
+}
+
+.nav-link:hover {
+  color: blue;
 }
 
 .btn--menu {
@@ -232,6 +237,14 @@ body {
   padding: 10px 50px;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+form button {
+  background-color: green;
+  color: white;
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+  border-radius: 0%;
 }
 
 .button:hover {
@@ -334,14 +347,6 @@ form textarea {
   margin-top: 1px;
 }
 
-form button {
-  background-color: green;
-  color: white;
-  font-size: 20px;
-  font-family: "Courier New", Courier, monospace;
-  border-radius: 0%;
-}
-
 textarea {
   resize: none;
 }
@@ -424,6 +429,7 @@ textarea {
 
   #margot-pic-area {
     max-width: 50%;
+    margin-top: 5%;
   }
 
   .margot-pic {
@@ -431,10 +437,16 @@ textarea {
     height: auto;
   }
 
+  .home-content-text {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0.5rem 2rem 2rem;
+  }
+
   /*-----ABOUT ME PAGE-----*/
 
   .about-title {
     font-size: 30px;
+    margin-top: 3%;
   }
 
   /*-----CONTACT PAGE-----*/

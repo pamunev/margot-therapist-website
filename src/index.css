@@ -216,7 +216,7 @@ body {
 
 .contact-page a {
   text-decoration: none;
-  color: var(--accent-2);
+  color: #89c3d3;
   font-weight: bold;
   transition: all 0.5s;
 }
@@ -303,11 +303,12 @@ form button {
   box-shadow: none;
   border-radius: 0;
   background-color: var(--body-background);
-  border-color: var(--accent-2);
+  border-color: black;
   border-style: none none solid none;
   width: 100%;
   font-size: 1em;
   transition: all 0.6s;
+  border-width: 0.06rem;
 }
 
 .form-control:focus {

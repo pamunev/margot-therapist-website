@@ -3,8 +3,10 @@
   --form-font-color: #555;
   --form-font-hover-color: green;
   --accent: #c2efeb;
-  --accent-2: #a3b899;
-  --button: #c892a4;
+  /*--accent-2: #a3b899;*/
+  --accent-2: #0067a3;
+  /*--button: #c892a4;*/
+  --button: #0067a3;
   --dark: #050264;
   --dark-2: #0067a3;
   --body-background: #f7f7f7;
@@ -420,7 +422,7 @@ textarea {
   }
 
   .btn--menu {
-    color: var(--accent);
+    color: var(--accent-2);
     background-color: transparent;
     border: none;
     display: grid;

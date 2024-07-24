@@ -2,11 +2,13 @@
 :root {
   --form-font-color: #555;
   --form-font-hover-color: green;
-  --accent: purple;
+  --accent: #c2efeb;
+  --accent-2: #a3b899;
+  --button: #c892a4;
   --dark: #050264;
-  --body-background: #c2efeb;
-  --header-background: #b4d6ae;
-  --border: #81bb77;
+  --body-background: #f7f7f7;
+  --header-background: #ffffff;
+  --border: #f4f4f4;
 }
 
 /*-----Global Styles-----*/
@@ -105,6 +107,11 @@ body {
   color: black;
   margin-left: 2rem;
   font-size: 2.5rem;
+  transition: all 0.6s;
+}
+
+#header h1 a:hover {
+  color: var(--accent);
 }
 
 #header nav {
@@ -151,7 +158,7 @@ body {
 }
 
 .nav-link:hover {
-  color: blue;
+  color: var(--accent);
 }
 
 .btn--menu {
@@ -180,6 +187,14 @@ body {
   margin: 2rem;
 }
 
+.home-pg-btn {
+  background-color: green;
+  color: white;
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+  border-radius: 0%;
+}
+
 /*-----ABOUT ME PAGE-----*/
 
 .about-title {
@@ -198,8 +213,13 @@ body {
 
 .contact-page a {
   text-decoration: none;
-  color: #c892a4;
+  color: var(--accent-2);
   font-weight: bold;
+  transition: all 0.5s;
+}
+
+.contact-page a:hover {
+  color: var(--accent);
 }
 
 .contact-text {
@@ -230,9 +250,9 @@ body {
 
 .button {
   background: 0 0 var(--body-background);
-  border: 1px solid #c892a4;
+  border: 1px solid var(--button);
   border-radius: 3px;
-  color: #c892a4;
+  color: var(--button);
   font-size: 1em;
   padding: 10px 50px;
   text-transform: uppercase;
@@ -280,7 +300,7 @@ form button {
   box-shadow: none;
   border-radius: 0;
   background-color: var(--body-background);
-  border-color: #c892a4;
+  border-color: var(--accent-2);
   border-style: none none solid none;
   width: 100%;
   font-size: 1em;
@@ -294,7 +314,7 @@ form button {
 }
 
 .form-control::placeholder {
-  color: #c892a4;
+  color: #aaa;
 }
 
 .form-control:focus::placeholder {

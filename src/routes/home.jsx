@@ -54,7 +54,7 @@ export default function Home() {
           </strong>
         </p>
         <NavLink to="/contact">
-          <button type="submit" className="button">
+          <button type="submit" className="button home-pg-btn">
             Request an appointment
           </button>
         </NavLink>

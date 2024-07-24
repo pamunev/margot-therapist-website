@@ -1,4 +1,4 @@
-import margot from "../Assets/images/margot-dog.png";
+import margot from "../Assets/images/margot-therapist-2.png";
 
 import { NavLink } from "react-router-dom";
 

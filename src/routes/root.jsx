@@ -1,29 +1,30 @@
 import { Outlet, NavLink } from "react-router-dom";
 import Footer from "./footer";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 function Root() {
   const [isExpanded, setIsExpanded] = useState(false);
+  const menuRef = useRef(null);
+  const navBtnRef = useRef(null);
 
   const handleNavBtnClick = () => {
     setIsExpanded((prev) => !prev);
   };
 
+  const handleClickOutside = (event) => {
+    if (
+      menuRef.current &&
+      !menuRef.current.contains(event.target) &&
+      !navBtnRef.current.contains(event.target)
+    ) {
+      setIsExpanded(false);
+    }
+  };
+
   useEffect(() => {
-    document.querySelectorAll(".nav-link").forEach((link) => {
-      console.log(link.href);
-    });
-
-    const navBtn = document.querySelector("#menu-btn");
-
-    navBtn.addEventListener("click", () => {
-      const isExpanded = JSON.parse(navBtn.getAttribute("aria-expanded"));
-      navBtn.setAttribute("aria-expanded", !isExpanded);
-    });
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
-
-  const nav = document.querySelector("nav");
-  const navLinks = document.querySelector(".nav-links");
 
   return (
     <div id="root-component">
@@ -41,6 +42,7 @@ function Root() {
             aria-controls="menu"
             aria-label="Open mobile nav"
             onClick={handleNavBtnClick}
+            ref={navBtnRef}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -61,19 +63,35 @@ function Root() {
             role="menubar"
             className={`nav-links ${isExpanded ? "activated" : ""}`}
             id="menu"
+            ref={menuRef}
           >
             <li role="none">
-              <NavLink role="menuitem" to="/" className="nav-link btn">
+              <NavLink
+                role="menuitem"
+                to="/"
+                className="nav-link btn"
+                onClick={() => setIsExpanded(false)}
+              >
                 Home
               </NavLink>
             </li>
             <li role="none">
-              <NavLink role="menuitem" to="/about-me" className="nav-link btn">
+              <NavLink
+                role="menuitem"
+                to="/about-me"
+                className="nav-link btn"
+                onClick={() => setIsExpanded(false)}
+              >
                 About me
               </NavLink>
             </li>
             <li role="none">
-              <NavLink role="menuitem" to="/contact" className="nav-link btn">
+              <NavLink
+                role="menuitem"
+                to="/contact"
+                className="nav-link btn"
+                onClick={() => setIsExpanded(false)}
+              >
                 Contact
               </NavLink>
             </li>

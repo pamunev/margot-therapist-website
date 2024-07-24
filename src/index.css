@@ -6,6 +6,7 @@
   --accent-2: #a3b899;
   --button: #c892a4;
   --dark: #050264;
+  --dark-2: #0067a3;
   --body-background: #f7f7f7;
   --header-background: #ffffff;
   --border: #f4f4f4;
@@ -391,18 +392,23 @@ textarea {
     align-items: center;
     gap: 1.5rem;
     transform: translate3d(0, -200%, 0);
+    transition: transform 0.4s cubic-bezier(0.64, 0.04, 0.26, 0.87);
     position: absolute;
-    top: 3rem;
+    top: 4rem;
     right: 0;
-    left: 0;
-    background-color: var(--dark);
+    left: 2;
+    background-color: var(--dark-2);
     padding: 1.5rem;
     border-bottom: 4px solid var(--accent);
     text-align: center;
   }
 
   .nav-links.activated {
-    transition: transform 0.4s cubic-bezier(0.64, 0.04, 0.26, 0.87);
+    transform: translateY(0);
+  }
+
+  .nav-links:not(.activated) {
+    transform: translateY(-200%);
   }
 
   .btn {

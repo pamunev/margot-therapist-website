@@ -484,6 +484,7 @@ textarea {
 
   .contact-text {
     width: 100%;
+    margin-left: 2rem;
   }
 
   /*-----Contact form-----*/
@@ -494,7 +495,7 @@ textarea {
   }
 
   .container-form {
-    width: 75%;
+    width: 70%;
   }
 }
 

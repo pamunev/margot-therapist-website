@@ -1,16 +1,16 @@
-import pig from "../Assets/images/pygmy-pig.png";
-import reversePig from "../Assets/images/reversed-pygmy-pig.png";
+import dogLookingLeft from "../Assets/images/dog-transparent-zoom.png";
+import dogLookingRight from "../Assets/images/dog-looking-right.png";
 
 export default function Footer() {
   return (
     <div>
       <div className="copyright">
         <span className="reverse-pig-image">
-          <img src={reversePig} />{" "}
+          <img src={dogLookingRight} />{" "}
         </span>
         <p>© 2024 Margot Goralczyk. All rights reserved.</p>
         <span className="pig-image">
-          <img src={pig} />{" "}
+          <img src={dogLookingLeft} />{" "}
         </span>
       </div>
     </div>

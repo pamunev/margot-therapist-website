@@ -50,3 +50,35 @@ This project is a responsive website built for a therapist's practice, featuring
    ```bash
    npm start
    ```
+2. Open your browser and go to http://localhost:3000 to view the website.
+
+## Deployment
+
+The website is deployed on Vercel. You can view the live site [here](https://margot-therapist-website.vercel.app/).
+
+To deploy your own version:
+
+1. Push your changes to GitHub.
+2. Connect your GitHub repository to Vercel.
+3. Follow the instructions on Vercel to deploy the site.
+
+## Screenshots
+
+### Home Page
+
+![Home Page](.//src/Assets/screenshots/home-page-margot-therapist.png)
+
+### About Me Page
+
+![About Me Page](./src/Assets/screenshots/about-page-margot-therapist.png)
+
+### Contact Page
+
+![Contact Page](./src/Assets/screenshots/contact-page-margot-therapist.png)
+
+## Contact
+
+If you have any questions or feedback, please feel free to reach out:
+
+- **Email**: [pamunev@gmail.com](mailto:pamunev@gmail.com)
+- **GitHub**: [pamunev](https://github.com/pamunev)

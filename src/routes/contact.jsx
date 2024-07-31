@@ -47,8 +47,6 @@ function Contact() {
               margot.goralczyk@gmail.com
             </a>
           </div>
-          <div className="contact-category">Phone:</div>
-          <div className="contact-info">412-398-4241</div>
         </div>
         <div className="container-form">
           <Form ref={form} onSubmit={sendEmail} action="" className="form">
